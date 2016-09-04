@@ -44,8 +44,14 @@ Terminal::Terminal():
   action_client_.waitForServer();
 }
 
-Terminal::Terminal(const std::string &name):
-  action_client_(name, true)
+Terminal::Terminal(bool spin_thread):
+  action_client_(settings::name(), spin_thread)
+{
+  action_client_.waitForServer();
+}
+
+Terminal::Terminal(const std::string &name, bool spin_thread):
+  action_client_(name, spin_thread)
 {
   action_client_.waitForServer();
 }

@@ -87,9 +87,14 @@ public:
   Terminal();
 
   /**
+   * \brief Create a terminal client with optional background thread.
+   */
+  Terminal(bool spin_thread);
+
+  /**
    * \brief Create a terminal client connected to the given server.
    */
-  Terminal(const std::string &name);
+  Terminal(const std::string &name, bool spin_thread=true);
 
   template<class T>
   Terminal &operator >> (T &value);
