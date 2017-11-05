@@ -6,7 +6,7 @@ Terminal I/O enables ROS nodes to communicate with external terminal sessions.
 Build & Install
 ---------------
 
-CV Video is built using [catkin](http://wiki.ros.org/catkin). Type the commands below on a terminal window to create a catkin workspace, clone the repository and build the sources:
+Terminal I/O is built using [catkin](http://wiki.ros.org/catkin). Type the commands below on a terminal window to create a catkin workspace, clone the repository and build the sources:
 
     $ mkdir -p ~/catkin_ws/src
     $ cd ~/catkin_ws/src
@@ -24,4 +24,4 @@ First, the `terminal_server` process must be started in a terminal session, for 
 
 It may also be possible to automatically create a new terminal window and start the server on it as part of a launch file. The details will vary depending on the environment, though; see the project's `launch` folder for an example on KDE.
 
-Once the server is on, a ROS process can use a `terminal_io::Terminal` object to communicate to it, printing text orreading back user input. See the `include/terminal_io/terminal.h` header file for details.
+Once the server is on, a ROS process can use a `terminal_io::Terminal` object to communicate to it, printing text or reading back user input. See the `include/terminal_io/terminal.h` header file for details.
